@@ -7,15 +7,15 @@ while True:
     estudante = input("Você é estudante? (s/n): ").lower()
 
     if (filme == "2" or filme == "3") and idade < 18:
-        print("❌ ACESSO NEGADO: Este filme não é permitido para menores de 18 anos.")
+        print(" ACESSO NEGADO: Este filme não é permitido para menores de 18 anos!.")
     
     else:
         if estudante == "s" or idade <= 12:
             valor_final = valor_base / 2
-            print(f"✅ TICKET GERADO (Meia-entrada): R${valor_final:.2f}")
+            print(f" TICKET GERADO (Meia-entrada): R${valor_final:.2f}")
         else:
             valor_final = valor_base
-            print(f"✅ TICKET GERADO (Inteira): R${valor_final:.2f}")
+            print(f" TICKET GERADO (Inteira): R${valor_final:.2f}")
         
         print("Bom filme!")
 
@@ -25,3 +25,4 @@ while True:
         print("Encerrando sistema de bilheteria...")
         break
         
+
