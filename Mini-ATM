@@ -1,0 +1,30 @@
+saldo = 2000
+
+while True:
+    print("\n--- BANCO PYTHON ---")
+    print("1. Saldo / 2. Depósito / 3. Saque / 4. Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        print(f"Seu saldo atual é: R${saldo:.2f}")
+
+    elif opcao == "2":
+        valor = float(input("Quanto deseja depositar?: R$"))
+        saldo = saldo + valor
+        print(f"Depósito de R${valor:.2f} Concluído!")
+
+    elif opcao == "3":
+        saque = float(input("Quanto deseja sacar?: R$"))
+        if saque <= saldo:
+            saldo = saldo - saque
+            print(f"Saque de R${saque:.2f} Concluído!")
+        else:
+            print("ERRO: Saldo insuficiente para esta operação.")
+
+    elif opcao == "4":
+        print("Obrigado por usar nosso banco. Até logo!")
+        break
+
+    else:
+        print("Opção inválida! Por favor, escolha entre 1 e 4.")
