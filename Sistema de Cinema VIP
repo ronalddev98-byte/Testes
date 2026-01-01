@@ -1,0 +1,27 @@
+while True:
+    print("\n--- CINEMA PYTHON ---")
+    print("1. Avatar | 2. Jogos Mortais | 3. Coringa | 4. Up: Altas Aventuras")
+    filme = input("Escolha o número do filme: ")
+    valor_base = float(input("Qual o valor do ingresso? R$ "))
+    idade = int(input("Qual sua idade? "))
+    estudante = input("Você é estudante? (s/n): ").lower()
+
+    if (filme == "2" or filme == "3") and idade < 18:
+        print("❌ ACESSO NEGADO: Este filme não é permitido para menores de 18 anos.")
+    
+    else:
+        if estudante == "s" or idade <= 12:
+            valor_final = valor_base / 2
+            print(f"✅ TICKET GERADO (Meia-entrada): R${valor_final:.2f}")
+        else:
+            valor_final = valor_base
+            print(f"✅ TICKET GERADO (Inteira): R${valor_final:.2f}")
+        
+        print("Bom filme!")
+
+    continuar = input("\nDeseja vender outro ingresso? (s/n): ")
+
+    if continuar == "n":
+        print("Encerrando sistema de bilheteria...")
+        break
+        
